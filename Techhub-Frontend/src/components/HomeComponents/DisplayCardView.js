@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 import Rating from "../SharedComponents/Rating";
 
 const DisplayCardView = ({ cardData, children }) => {
+  // Fallback to an empty array if cardData is undefined/null
+  const cards = Array.isArray(cardData) ? cardData.slice(0, 6) : [];
+
   return (
     <Container className="mt-4">
       <h2 className="text-center mb-4">{children}</h2>
       <Row className="justify-content-center g-4">
-        {cardData.slice(0, 6).map((card) => (
+        {cards.map((card) => (
           <Col key={card._id} md={4} sm={6} xs={12} className="d-flex justify-content-center">
             <Card
               style={{
@@ -62,9 +65,6 @@ const DisplayCardView = ({ cardData, children }) => {
           </Col>
         ))}
       </Row>
-
-      {/* "View More Courses" Button */}
-  
     </Container>
   );
 };
