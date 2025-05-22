@@ -5,6 +5,7 @@ import BuildYourAudience from "../../Images/BuidYouAdudience.jpg";
 import getStartedWithVideo from "../../Images/getStartedWithVideo.jpg";
 import EngagingCourse from "../../Images/EngagingCourse.jpg";
 import NewInstructorChallenge from "../../Images/NewInstructorChallenge.jpg";
+//hey this is instructor
 const InstructorGuideCards = () => {
   return (
     <Container>
